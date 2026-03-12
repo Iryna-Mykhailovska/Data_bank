@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <title>DataWarehouse</title>
 </head>
 
 <body>
@@ -93,19 +94,19 @@
                     </p>
                 </header>
 
-                <ul class="features__grid">
+                <ul class="features__flex">
                     <li class="features__item card">
                         <div class="card__image-wrapper">
                             <img src="./assets/img/desktop/img_card_1_desktop.png" alt="Search Data"
                                 class="card__image">
                         </div>
                         <div class="card__content">
-                            <h4 class="card__title">Search Data</h4>
+                            <h3 class="card__title title">Search Data</h3>
                             <p class="card__text">
                                 Don’t worry if your data is very large, the Data Warehoue provides a search engine,
                                 which is useful for making it easier to find data effectively saving time.
                             </p>
-                            <a href="#" class="card__btn btn btn--text">
+                            <a href="#" class="card__btn">
                                 Learn more
                                 <svg width="20" height="14" class="btn__icon">
                                     <use xlink:href="./assets/img/svg/sprite.svg#icon-arrow"></use>
@@ -120,12 +121,12 @@
                                 class="card__image">
                         </div>
                         <div class="card__content">
-                            <h4 class="card__title">24 Hours Access</h4>
+                            <h3 class="card__title title">24 Hours Access</h3>
                             <p class="card__text">
                                 Access is given 24 hours a full morning to night and meet again in the morning,
                                 giving you comfort when you need data when urgent.
                             </p>
-                            <a href="#" class="card__btn btn btn--text">
+                            <a href="#" class="card__btn">
                                 Learn more
                                 <svg width="20" height="14" class="btn__icon">
                                     <use xlink:href="./assets/img/svg/sprite.svg#icon-arrow"></use>
@@ -139,12 +140,12 @@
                             <img src="./assets/img/desktop/img_card_3_desktop.png" alt="Print Out" class="card__image">
                         </div>
                         <div class="card__content">
-                            <h4 class="card__title">Print Out</h4>
+                            <h3 class="card__title title">Print Out</h3>
                             <p class="card__text">
                                 Print out service gives you convenience if someday you need print data,
                                 just edit it all and just print it.
                             </p>
-                            <a href="#" class="card__btn btn btn--text">
+                            <a href="#" class="card__btn">
                                 Learn more
                                 <svg width="20" height="14" class="btn__icon">
                                     <use xlink:href="./assets/img/svg/sprite.svg#icon-arrow"></use>
@@ -159,12 +160,12 @@
                                 class="card__image">
                         </div>
                         <div class="card__content">
-                            <h4 class="card__title">Security Code</h4>
+                            <h3 class="card__title title">Security Code</h3>
                             <p class="card__text">
                                 Data Security is one of our best facilities. Allows for your files to be safer.
                                 The file can be secured with a code or password that you created.
                             </p>
-                            <a class="card__btn btn btn--text">
+                            <a class="card__btn">
                                 Learn more
                                 <svg width="20" height="14" class="btn__icon">
                                     <use xlink:href="./assets/img/svg/sprite.svg#icon-arrow"></use>
@@ -181,20 +182,36 @@
                 <h2 class="testimonials__title title">Testimonials</h2>
                 <ul class="testimonials__cards">
                     <li class="testimonials__card">
-                        <picture>
-
-                        </picture>
-                        <span>John Fang </span><a href="wordfaang.com">wordfaang.com</a>
-                        <p>Suspendisse ultrices at diam lectus nullam.
-                            Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
-                            laoreet nulla.</p>
+                        <figure>
+                            <picture>
+                                <img src="./assets/img/desktop/avatar_1_descktop.png" alt="John Fang">
+                            </picture>
+                            <blockquote>
+                                <p>Suspendisse ultrices at diam lectus nullam.
+                                    Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean
+                                    nam laoreet nulla.</p>
+                            </blockquote>
+                            <figcaption>
+                                <strong>John Fang</strong>
+                                <a href="https://wordfaang.com">wordfaang.com</a>
+                            </figcaption>
+                        </figure>
                     </li>
-                    <li>
-                        <picture></picture>
-                        <span>Hanna Wilson</span><a href="wordfaang.com">wordfaang.com</a>
-                        <p>Suspendisse ultrices at diam lectus nullam.
-                            Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
-                            laoreet nulla.</p>
+                    <li class="testimonials__card">
+                        <figure>
+                            <picture>
+                                <img src="./assets/img/desktop/avatar_2_desktop.png" alt="John Fang">
+                            </picture>
+                            <blockquote>
+                                <p>Suspendisse ultrices at diam lectus nullam.
+                                    Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean
+                                    nam laoreet nulla.</p>
+                            </blockquote>
+                            <figcaption>
+                                <strong>Hanna Wilson</strong>
+                                <a href="https://wordfaang.com">wordfaang.com</a>
+                            </figcaption>
+                        </figure>
                     </li>
                 </ul>
             </div>
@@ -203,58 +220,72 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <header class="footer__header">
-                <div>
-                    <h2>Try for free!</h2>
-                    <p>Get limited 1 week free try our features!</p>
+            <div class="footer__top">
+                <div class="footer__cta">
+                    <h2 class="footer__title">Try for free!</h2>
+                    <p class="footer__subtitle">Get limited 1 week free try our features!</p>
                 </div>
-                <a href="#" class="footer__btn btn">Learn more</a>
-                <a href="#" class="header__btn btn btn--with-icon">
-                    Request Demo
-                    <svg width="20" height="14" class="btn__icon">
-                        <use xlink:href="./assets/img/svg/sprite.svg#icon-arrow"></use>
-                    </svg>
-                </a>
-                <div class="footer__navigation">
-                    <div class="col">
-                        <a href="#" class="header__logo">
-                            <svg width="45" height="35" class="header__logo-icon">
-                                <use xlink:href="./assets/img/svg/sprite.svg#icon-logo"></use>
-                            </svg>
-                        </a>
-                        <span>DataWarehouse</span>
-                        <address>
-
-                        </address>
-                    </div>
-                    <div class="col">
-                        <h5>About</h5>
-                        <ul>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">DW News</a></li>
-                        </ul>
-
-                    </div>
-                    <div class="col">
-                        <h5>Help</h5>
-                        <ul>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Sign up</a></li>
-                            <li><a href="#">Guide</a></li>
-                            <li><a href="#">Reports</a></li>
-                            <li><a href="#">Q&A</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-
-                    </div>
-
+                <div class="footer__actions">
+                    <a href="#" class="btn">Learn more</a>
+                    <a href="#" class="btn btn--with-icon">
+                        Request Demo
+                        <svg width="20" height="14" class="btn__icon" aria-hidden="true">
+                            <use xlink:href="./assets/img/svg/sprite.svg#icon-arrow"></use>
+                        </svg>
+                    </a>
                 </div>
-            </header>
-            <p>&copy; Datawarehouse™, 2020. All rights reserved.
-                Company Registration Number: 21479524.</p>
+            </div>
+            <div class="footer__main">
+                <div class="footer__col footer__col--info">
+                    <a href="#" class="header__logo">
+                        <svg width="45" height="35" class="header__logo-icon" aria-label="DataWarehouse Logo">
+                            <use xlink:href="./assets/img/svg/sprite.svg#icon-logo"></use>
+                        </svg>
+                    </a>
+                    <strong class="footer__brand-name">DataWarehouse</strong>
+                    <address class="footer__address">
+                        <p>Warehouse Society, 234<br>
+                            Bahagia Ave Street<br>
+                            PRBW 29281</p>
+                        <ul class="footer__contacts-list">
+                            <li><a href="mailto:info@warehouse.project">info@warehouse.project</a></li>
+                            <li><a href="tel:+12323434">1-232-3434 (Main)</a></li>
+                        </ul>
+                    </address>
+                </div>
+
+                <nav class="footer__col" aria-label="About menu">
+                    <h4 class="footer__col-title">About</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">DW News</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer__col" aria-label="Help menu">
+                    <h4 class="footer__col-title">Help</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Guide</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Q&A</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer__col footer__col--social">
+                    <h4 class="footer__col-title">Social Media</h4>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <small class="footer__copyright">
+                    &copy; Datawarehouse™, 2020. All rights reserved.
+                    <span>Company Registration Number: 21479524.</span>
+                </small>
+            </div>
         </div>
     </footer>
 </body>
