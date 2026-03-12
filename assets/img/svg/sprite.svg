@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<symbol id="icon-logo" viewBox="0 0 41 32">
+<path fill="#9c69e2" style="fill: var(--color1, #9c69e2)" d="M8.37 13.714h0c4.623 0 8.37 3.747 8.37 8.37v1.545c0 4.623-3.747 8.37-8.37 8.37h-0c-4.623 0-8.37-3.747-8.37-8.37v-1.545c0-4.623 3.747-8.37 8.37-8.37z"></path>
+<path fill="#f063b8" style="fill: var(--color2, #f063b8)" d="M32.644 0h0c4.623 0 8.37 3.747 8.37 8.37v15.26c0 4.623-3.747 8.37-8.37 8.37h-0c-4.623 0-8.37-3.747-8.37-8.37v-15.26c0-4.623 3.747-8.37 8.37-8.37z"></path>
+</symbol>
 <symbol id="icon-arrow" viewBox="0 0 44 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M30 30l12-14-12-14"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M42 16h-40"></path>

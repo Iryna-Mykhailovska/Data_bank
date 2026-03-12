@@ -29,27 +29,31 @@ body {
     margin: 0 auto;
 }
 
-.flex_container {
-    @include m.flex(space-between, center);
-
-}
 
 .header {
     padding: 20px 0;
+
+    &__body {
+        @include m.flex(space-between, center);
+    }
+
+    &__logo {}
+
+    &__nav {}
 }
 
 .menu {
     @include m.flex(space-between, center);
     gap: 40px;
 
-    &_link {
+    &__link {
         // font-family: v.;
-        @include m.font_title(0.889rem, 1.6, 500);
+        @include m.font_title(1rem, 1.6, 500);
         color: v.$text-gray-dark;
 
         &:hover {
             color: v.$colors-violet-middle;
-           cursor: url('../assets/img/cursor.png'), pointer;
+            cursor: url('../assets/img/cursor.png'), pointer;
         }
     }
 
@@ -58,20 +62,109 @@ body {
 .btn {
     @extend %btn-base;
     color: v.$text-violet-dark;
-    font-size: 0.889rem;
+    font-size: 1rem;
     border: 1px solid v.$colors-violet;
     padding: 16px 23px;
+    border-radius: 50px;
     background-color: v.$text-white;
-    &_icon{
-    stroke:v.$colors-violet;
-    fill:none;
-}
-    &:hover{
-        color:v.$text-white;
+
+    &__icon {
+        stroke: v.$colors-violet;
+        fill: none;
+    }
+
+    &:hover {
+        color: v.$text-white;
         background-color: v.$colors-violet;
 
     }
-    &:hover .btn_icon{
-        stroke:v.$text-white;
+
+    &:hover .btn__icon {
+        stroke: v.$text-white;
     }
+}
+
+.title {
+    font-family: v.$second-family;
+    vertical-align: middle;
+    color: v.$text-violet-dark;
+}
+
+.hero {
+    padding: 100px 0;
+
+    &__content {
+        display: flex;
+        position: relative;
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__title {
+        @include m.font_title(5rem, 1.1, 700);
+        // font-size: 80px;
+        // line-height: 1.1;
+        // font-weight: 700;
+        width: 600px;
+    }
+
+    &__description {
+        width: 370px;
+        font-family: v.$font-family;
+        @include m.font_title(1.125rem, 1.6, 500);
+        // font-weight: 500;
+        // font-size: 18px;
+        // line-height: 160%;
+    }
+
+    &__btn {
+        background-color: v.$colors-violet;
+        color: v.$text-white;
+        text-align: center;
+
+        &:hover {
+            background-color: v.$colors-violet-middle;
+        }
+    }
+
+    &__image-wrapper {
+        position: absolute;
+        top: 82px;
+        right: 0;
+    }
+
+    // h2 font-size: 40px;
+    // line-height: 130%;
+    // font-weight: 700;
+
+
+    // h2_testimonials color:v.$text-gray-dark;
+    // text-align: center;
+
+    // h3 card
+
+    // font-weight: 400;
+    // font-size: 24px;
+    // line-height: 130%;
+
+    // span_autor
+    // font-family: Montserrat;
+    // font-weight: 500;
+    // font-size: 16px;
+    // line-height: 160%;
+    // vertical-align: middle;
+
+    // about h4?
+    // font-family: Montserrat;
+    // font-weight: 600;
+    // font-size: 16px;
+    // line-height: 160%;
+    // vertical-align: middle;
+
+
+
 }

@@ -32,7 +32,8 @@
   line-height: 1.6;
   font-weight: 500;
   color: #fff;
-  border-radius: 50px;
+  width: 210px;
+  height: 60px;
   box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.1019607843);
   cursor: url("../assets/img/cursor.png"), pointer;
   border: 1px solid transparent;
@@ -56,7 +57,7 @@ a {
 html,
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .container {
@@ -64,41 +65,40 @@ body {
   margin: 0 auto;
 }
 
-.flex_container {
+.header {
+  padding: 20px 0;
+}
+.header__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.header {
-  padding: 20px 0;
-}
-
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
 }
-.menu_link {
-  font-size: 0.889rem;
+.menu__link {
+  font-size: 1rem;
   line-height: 1.6;
   font-weight: 500;
   color: #4b5d68;
 }
-.menu_link:hover {
+.menu__link:hover {
   color: #8a40ee;
   cursor: url("../assets/img/cursor.png"), pointer;
 }
 
 .btn {
   color: #212353;
-  font-size: 0.889rem;
+  font-size: 1rem;
   border: 1px solid #9c69e2;
   padding: 16px 23px;
+  border-radius: 50px;
   background-color: #fff;
 }
-.btn_icon {
+.btn__icon {
   stroke: #9c69e2;
   fill: none;
 }
@@ -106,6 +106,51 @@ body {
   color: #fff;
   background-color: #9c69e2;
 }
-.btn:hover .btn_icon {
+.btn:hover .btn__icon {
   stroke: #fff;
+}
+
+.title {
+  font-family: "Work Sans", sans-serif;
+  vertical-align: middle;
+  color: #212353;
+}
+
+.hero {
+  padding: 100px 0;
+}
+.hero__content {
+  display: flex;
+  position: relative;
+}
+.hero__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.hero__title {
+  font-size: 5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  width: 600px;
+}
+.hero__description {
+  width: 370px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.hero__btn {
+  background-color: #9c69e2;
+  color: #fff;
+  text-align: center;
+}
+.hero__btn:hover {
+  background-color: #8a40ee;
+}
+.hero__image-wrapper {
+  position: absolute;
+  top: 82px;
+  right: 0;
 }/*# sourceMappingURL=main.css.map */
