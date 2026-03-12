@@ -73,6 +73,36 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.header__logo {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.header__logo-icon {
+  width: 45px;
+  height: 35px;
+  --color1: #9c69e2;
+  --color2: #f063b8;
+}
+.header__logo-icon .path-small, .header__logo-icon .path-big {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), fill 0.5s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.header__logo:hover, .header__logo:focus {
+  transform: scale(1.1);
+  cursor: url("../assets/img/cursor.png"), pointer;
+}
+.header__logo:hover .header__logo-icon, .header__logo:focus .header__logo-icon {
+  --color1: #f063b8;
+  --color2: #9c69e2;
+}
+.header__logo:hover .header__logo-icon .path-small, .header__logo:focus .header__logo-icon .path-small {
+  transform: translateX(24px);
+}
+.header__logo:hover .header__logo-icon .path-big, .header__logo:focus .header__logo-icon .path-big {
+  transform: translateX(-24px);
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -102,11 +132,11 @@ body {
   stroke: #9c69e2;
   fill: none;
 }
-.btn:hover {
+.btn:hover, .btn:focus {
   color: #fff;
   background-color: #9c69e2;
 }
-.btn:hover .btn__icon {
+.btn:hover .btn__icon, .btn:focus .btn__icon {
   stroke: #fff;
 }
 

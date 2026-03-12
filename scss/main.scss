@@ -37,10 +37,47 @@ body {
         @include m.flex(space-between, center);
     }
 
-    &__logo {}
+    &__logo {
+        display: inline-block; // Чтобы transform работал корректно
+        transition: transform 0.3s ease;
 
-    &__nav {}
+        &-icon {
+            width: 45px;
+            height: 35px;
+            --color1: #9c69e2;
+            --color2: #f063b8;
+
+            .path-small, .path-big {
+                transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), fill 0.5s ease;
+                transform-box: fill-box; // Важно для корректного отсчета координат
+                transform-origin: center;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+            cursor: url('../assets/img/cursor.png'), pointer;
+
+            .header__logo-icon {
+                // 1. Меняем цвета (перекрестно)
+                --color1: #f063b8; 
+                --color2: #9c69e2;
+
+                // 2. Двигаем фигуры на места друг друга
+                .path-small {
+                    transform: translateX(24px); // Плывет вправо
+                }
+                .path-big {
+                    transform: translateX(-24px); // Плывет влево
+                }
+            }
+        }
+    }
+
 }
+
+
 
 .menu {
     @include m.flex(space-between, center);
@@ -73,13 +110,15 @@ body {
         fill: none;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: v.$text-white;
         background-color: v.$colors-violet;
 
     }
 
-    &:hover .btn__icon {
+    &:hover .btn__icon,
+    &:focus .btn__icon {
         stroke: v.$text-white;
     }
 }
