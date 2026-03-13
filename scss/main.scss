@@ -27,6 +27,7 @@ body {
 .container {
     max-width: v.$container_width;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 
@@ -47,7 +48,8 @@ body {
             --color1: #9c69e2;
             --color2: #f063b8;
 
-            .path-small, .path-big {
+            .path-small,
+            .path-big {
                 transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), fill 0.5s ease;
                 transform-box: fill-box; // Важно для корректного отсчета координат
                 transform-origin: center;
@@ -61,13 +63,14 @@ body {
 
             .header__logo-icon {
                 // 1. Меняем цвета (перекрестно)
-                --color1: #f063b8; 
+                --color1: #f063b8;
                 --color2: #9c69e2;
 
                 // 2. Двигаем фигуры на места друг друга
                 .path-small {
                     transform: translateX(24px); // Плывет вправо
                 }
+
                 .path-big {
                     transform: translateX(-24px); // Плывет влево
                 }
@@ -129,6 +132,12 @@ body {
     color: v.$text-violet-dark;
 }
 
+.text {
+    font-family: v.$font-family;
+    color: v.$text-gray-dark;
+    @include m.font_title(1.125rem, 1.6, 500);
+}
+
 .hero {
     padding: 100px 0;
 
@@ -151,13 +160,16 @@ body {
         width: 600px;
     }
 
-    &__description {
-        width: 370px;
-        font-family: v.$font-family;
-        @include m.font_title(1.125rem, 1.6, 500);
+    &__text {
+        max-width: 370px;
+
         // font-weight: 500;
         // font-size: 18px;
         // line-height: 160%;
+        @media screen and (max-width:992px) {
+            color: v.$text-violet-dark;
+            font-weight: 700;
+        }
     }
 
     &__btn {
@@ -174,6 +186,7 @@ body {
         position: absolute;
         top: 82px;
         right: 0;
+        z-index: -1;
     }
 
     // h2 font-size: 40px;
@@ -208,19 +221,60 @@ body {
 
 }
 
+.bank {
+
+    margin-bottom: 120px;
+    background-color: v.$colors-pink-medium;
+    border-radius: 50px;
+    padding: 75px 0;
+
+    &__body {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 70px;
+        gap: 130px;
+    }
+
+    &__title {
+        @include m.font_title(2.5rem, 1.3, 700);
+        margin-bottom: 40px;
+        // font-weight: 700;
+        // font-size: 40px;
+        // line-height: 130%;
+
+
+    }
+}
+
 .features {
     &__title {
         text-align: center;
         @include m.font_title(2.5rem, 1.3, 700);
+        margin-bottom: 50px;
         //      font-size: 40px;
         // line-height: 130%;
         // font-weight: 700;
 
     }
 
+    &__header {
+        margin-bottom: 80px;
+    }
+
+    &__text {
+        width: 638px;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        // margin-bottom: 80px;
+    }
+
     &__flex {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         gap: 30px;
     }
 
@@ -230,8 +284,36 @@ body {
 }
 
 .card {
+    max-width: 570px;
+    position: relative;
+
+    &__image-wrapper {
+        position: absolute;
+        top: 110px;
+        left:-15px;
+    }
+
     &__text {
         width: 230px;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    &__content {
+        // position: absolute;
+        // left:107px;
+        background-color: v.$colors-green-light;
+        background-image: url('../assets/img/desktop/bg_img_card_1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50px;
+        padding: 62px 70px 62px 100px;
+
+    }
+
+    &__title {
+        margin-bottom: 20px;
     }
 
     &__btn {
