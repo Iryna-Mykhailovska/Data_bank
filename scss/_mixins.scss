@@ -22,9 +22,8 @@
 @mixin pos_center($percentX,$percentY) {
     // position: relative;
     left: $percentX;
-    transform: translateX(-1*$percentX);
     top:$percentY;
-    transform: translateY(-1*$percentY);
+    transform: translateX(-1*$percentX) translateY(-1*$percentY);
 
 }
 

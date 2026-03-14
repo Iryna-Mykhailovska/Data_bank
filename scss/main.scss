@@ -197,9 +197,6 @@ body {
     // font-weight: 700;
 
 
-    // h2_testimonials color:v.$text-gray-dark;
-    // text-align: center;
-
     // h3 card
 
     // font-weight: 400;
@@ -213,12 +210,7 @@ body {
     // line-height: 160%;
     // vertical-align: middle;
 
-    // about h4?
-    // font-family: Montserrat;
-    // font-weight: 600;
-    // font-size: 16px;
-    // line-height: 160%;
-    // vertical-align: middle;
+
 
 
 
@@ -372,7 +364,6 @@ body {
     &__title {
         text-align: center;
         color: v.$text-gray-dark;
-        // margin-top: 80px;
         margin-bottom: 80px;
     }
 
@@ -386,22 +377,114 @@ body {
 
 .footer {
     padding: 120px 0;
+
     &__top {
         margin-bottom: 100px;
     }
 
     &__main {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
+        @include m.flex(space-between, baseline);
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: baseline;
         margin-bottom: 100px;
     }
+
+    &__col-title {
+
+        @include m.font_title(1rem, 1.6, 600);
+        vertical-align: middle;
+        color: v.$text-violet-dark;
+        margin-bottom: 30px;
+        // about h4?
+        // font-family: Montserrat;
+        // font-weight: 600;
+        // font-size: 16px;
+        // line-height: 160%;
+        // vertical-align: middle;
+
+    }
+
+    &__nav__link {
+        color: v.$text-gray-dark;
+
+        &:hover {
+            color: v.$colors-violet-middle;
+            cursor: url('../assets/img/cursor.png'), pointer;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: v.$colors-gray-light;
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        // left:50%;
+        @include m.pos_center(50%, 50%);
+        fill: v.$text-white;
+    }
+
+    &__list {
+        &__item {
+            &:nth-child(3n+1):hover {
+                .footer__link {
+                    background: transparent;
+                    border: 1px solid v.$colors-blue-facebook;
+                }
+
+                .footer__icon {
+                    fill: v.$colors-blue-facebook;
+                    
+                }
+            }
+            &:nth-child(3n+2):hover {
+                .footer__link {
+                    background: transparent;
+                    border: 1px solid v.$colors-blue-twitter;
+                }
+
+                .footer__icon {
+                    fill: v.$colors-blue-twitter;
+                    
+                }
+            }
+            &:nth-child(3n+3):hover {
+                .footer__link {
+                    background: transparent;
+                    border: 1px solid v.$colors-pink-instagram;
+                }
+
+                .footer__icon {
+                    fill: v.$colors-pink-instagram;
+                    
+                }
+            }
+
+        }
+
+        &_icons {
+            @include m.flex(space-between, center);
+            gap: 15px;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+        }
+
+    }
+
+
 
     &__copyright {
         width: 275px;
         display: inline-block;
         color: v.$text-violet-dark;
-        @include m.font_title(0.75rem,1.8,300,1%);
+        @include m.font_title(0.75rem, 1.8, 300, 1%);
         // font-size:12px;
         // font-weight: 300;
         // line-height: 1.8;
