@@ -115,6 +115,9 @@ body {
 
     &:hover,
     &:focus {
+
+        @extend %btn-elevation;
+
         color: v.$text-white;
         background-color: v.$colors-violet;
 
@@ -249,6 +252,7 @@ body {
 }
 
 .features {
+    margin-bottom: 120px;
     &__title {
         text-align: center;
         @include m.font_title(2.5rem, 1.3, 700);
@@ -256,7 +260,6 @@ body {
         //      font-size: 40px;
         // line-height: 130%;
         // font-weight: 700;
-
     }
 
     &__header {
@@ -280,17 +283,57 @@ body {
 
     &__item {
         display: flex;
+        align-items: center;
     }
 }
 
 .card {
-    max-width: 570px;
-    position: relative;
+    max-width: 500px;
 
     &__image-wrapper {
-        position: absolute;
-        top: 110px;
-        left:-15px;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__content {
+        position: relative;
+        left: -70px;
+        border-radius: 50px;
+        padding: 62px 70px 62px 100px;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+
+    &:nth-child(4n + 1) .card__content {
+        background-color: v.$colors-green-light;
+        background-image: url('../assets/img/desktop/bg_img_card_1.png');
+        background-position: top 20px right 50px;
+    }
+
+    &:nth-child(4n + 2) .card__content {
+        background-color: v.$colors-violet-light;
+        background-image: url('../assets/img/desktop/bg_img_card_2.png');
+        background-position: bottom 20px right 20px;
+    }
+
+    &:nth-child(4n + 3) .card__content {
+        background-color: v.$colors-pink-light;
+        background-image: url('../assets/img/desktop/bg_img_card_3.png');
+        background-position: top 20px right 20px;
+    }
+
+    &:nth-child(4n + 4) .card__content {
+        background-color: v.$colors-blue-light;
+        background-image: url('../assets/img/desktop/bg_img_card_4.png');
+        background-position: top 20px left 20px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        @include m.font_title(1.5rem, 1.3, 400);
+        // font-weight: 400;
+        // font-size: 24px;
+        // line-height: 130%;
     }
 
     &__text {
@@ -299,36 +342,22 @@ body {
         font-size: 1rem;
     }
 
-    &__content {
-        // position: absolute;
-        // left:107px;
-        background-color: v.$colors-green-light;
-        background-image: url('../assets/img/desktop/bg_img_card_1.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        border-radius: 50px;
-        padding: 62px 70px 62px 100px;
-
-    }
-
-    &__title {
-        margin-bottom: 20px;
-    }
-
     &__btn {
-        // background-color: transparent;
-        // border: 1px solid transparent;
-        font-family: Montserrat;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 160%;
-        letter-spacing: 0.5%;
+        font-family: v.$font-family;
+        @include m.font_title(1rem, 1.6, 700, 0.5%);
         vertical-align: middle;
         color: v.$text-violet-dark;
         display: flex;
         align-items: center;
         gap: 20px;
+        margin-top: 50px;
+
+        &:hover {
+            cursor: url('../assets/img/cursor.png'), pointer;
+            @extend %btn-elevation;
+            box-shadow: none;
+            // font-size: 1.5rem;
+        }
     }
 }
 
