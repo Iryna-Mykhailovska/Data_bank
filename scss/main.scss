@@ -253,6 +253,7 @@ body {
 
 .features {
     margin-bottom: 120px;
+
     &__title {
         text-align: center;
         @include m.font_title(2.5rem, 1.3, 700);
@@ -361,7 +362,30 @@ body {
     }
 }
 
+.testimonials {
+    background-color: v.$colors-violet;
+    background-image: url('../assets/img/desktop/bg_img_testimonials.png');
+    background-size: auto;
+    border-radius: 50px;
+    padding-top: 80px;
+
+    &__title {
+        text-align: center;
+        color: v.$text-gray-dark;
+        // margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
 .footer {
+    padding: 120px 0;
     &__top {
         margin-bottom: 100px;
     }
@@ -376,5 +400,13 @@ body {
     &__copyright {
         width: 275px;
         display: inline-block;
+        color: v.$text-violet-dark;
+        @include m.font_title(0.75rem,1.8,300,1%);
+        // font-size:12px;
+        // font-weight: 300;
+        // line-height: 1.8;
+        // letter-spacing: 1%;
+        vertical-align: middle;
+
     }
 }
