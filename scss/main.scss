@@ -12,6 +12,8 @@
 ul,
 ol {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -407,8 +409,15 @@ body {
 
 .card {
     max-width: 550px;
-
     display: flex;
+        justify-content: center;
+
+    @media screen and (max-width:992px) {
+        max-width: 416px;
+        flex-wrap: wrap;
+        // justify-content: center;
+
+    }
 
     &__image-wrapper {
         position: relative;
@@ -429,25 +438,25 @@ body {
 
     &:nth-child(4n + 1) .card__content {
         background-color: v.$colors-green-light;
-        background-image: url('../assets/img/desktop/bg_img_card_1.png');
+        background-image: url('../assets/img/desktop/bg_img_card_1.webp');
         background-position: top 20px right 50px;
     }
 
     &:nth-child(4n + 2) .card__content {
         background-color: v.$colors-violet-light;
-        background-image: url('../assets/img/desktop/bg_img_card_2.png');
+        background-image: url('../assets/img/desktop/bg_img_card_2.webp');
         background-position: bottom 20px right 20px;
     }
 
     &:nth-child(4n + 3) .card__content {
         background-color: v.$colors-pink-light;
-        background-image: url('../assets/img/desktop/bg_img_card_3.png');
+        background-image: url('../assets/img/desktop/bg_img_card_3.webp');
         background-position: top 20px right 20px;
     }
 
     &:nth-child(4n + 4) .card__content {
         background-color: v.$colors-blue-light;
-        background-image: url('../assets/img/desktop/bg_img_card_4.png');
+        background-image: url('../assets/img/desktop/bg_img_card_4.webp');
         background-position: top 20px left 20px;
     }
 
@@ -486,8 +495,9 @@ body {
 
 .testimonials {
     background-color: v.$colors-blue-medium;
-    background-image: url('../assets/img/desktop/bg_img_testimonials.png');
-    background-size: auto;
+    background-image: url('../assets/img/desktop/bg_img_testimonials.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 50px;
     padding: 80px 70px;
 
@@ -619,7 +629,7 @@ body {
     &__address {
         max-width: 300px;
         font-style: normal;
-            }
+    }
 
     &__col-title {
 
@@ -748,7 +758,7 @@ body {
 
         &__link {
             color: v.$text-violet-dark;
-            cursor: url('../assets/img/cursor.png'),pointer;
+            cursor: url('../assets/img/cursor.png'), pointer;
             @include m.font_title(1rem, 1.8, 400, 1%);
             margin-bottom: 10px;
             // font-family: Montserrat;

@@ -34,6 +34,8 @@
 ul,
 ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -340,6 +342,13 @@ body {
 .card {
   max-width: 550px;
   display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 992px) {
+  .card {
+    max-width: 416px;
+    flex-wrap: wrap;
+  }
 }
 .card__image-wrapper {
   position: relative;
@@ -356,22 +365,22 @@ body {
 }
 .card:nth-child(4n+1) .card__content {
   background-color: #f0faf9;
-  background-image: url("../assets/img/desktop/bg_img_card_1.png");
+  background-image: url("../assets/img/desktop/bg_img_card_1.webp");
   background-position: top 20px right 50px;
 }
 .card:nth-child(4n+2) .card__content {
   background-color: #f6f0fd;
-  background-image: url("../assets/img/desktop/bg_img_card_2.png");
+  background-image: url("../assets/img/desktop/bg_img_card_2.webp");
   background-position: bottom 20px right 20px;
 }
 .card:nth-child(4n+3) .card__content {
   background-color: #fef0f8;
-  background-image: url("../assets/img/desktop/bg_img_card_3.png");
+  background-image: url("../assets/img/desktop/bg_img_card_3.webp");
   background-position: top 20px right 20px;
 }
 .card:nth-child(4n+4) .card__content {
   background-color: #eaf6fc;
-  background-image: url("../assets/img/desktop/bg_img_card_4.png");
+  background-image: url("../assets/img/desktop/bg_img_card_4.webp");
   background-position: top 20px left 20px;
 }
 .card__title {
@@ -405,8 +414,9 @@ body {
 
 .testimonials {
   background-color: #cdf;
-  background-image: url("../assets/img/desktop/bg_img_testimonials.png");
-  background-size: auto;
+  background-image: url("../assets/img/desktop/bg_img_testimonials.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 50px;
   padding: 80px 70px;
 }
