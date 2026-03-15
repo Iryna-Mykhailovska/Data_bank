@@ -196,43 +196,37 @@
                         <li class="testimonials__card">
                             <figure class="testimonials__figure">
                                 <picture>
-                                    <img class="testimonials__card_img" src="./assets/img/desktop/avatar_1_descktop.png"
+                                    <img class="testimonials__card_img" src="./assets/img/desktop/avatar_1_desktop.png"
                                         alt="John Fang">
                                 </picture>
                                 <figcaption>
-                                    <strong>John Fang</strong>
-                                    <a href="https://wordfaang.com">wordfaang.com</a>
+                                    <div class="testimonials__info">
+                                        <strong class="testimonials__autor">John Fang</strong>
+                                        <a href="https://wordfaang.com" class="testimonials__site">wordfaang.com</a>
+                                    </div>
                                     <blockquote>
-                                        <p>Suspendisse ultrices at diam lectus nullam.
-                                            Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu
-                                            pulvinar
-                                            aenean
-                                            nam laoreet nulla.</p>
+                                        <p>Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat
+                                            tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
                                     </blockquote>
                                 </figcaption>
-
-
                             </figure>
                         </li>
                         <li class="testimonials__card">
                             <figure class="testimonials__figure">
                                 <picture>
                                     <img class="testimonials__card_img" src="./assets/img/desktop/avatar_2_desktop.png"
-                                        alt="John Fang">
+                                        alt="Hanna Wilson">
                                 </picture>
                                 <figcaption>
-                                    <strong>Hanna Wilson</strong>
-                                    <a href="https://wordfaang.com">wordfaang.com</a>
+                                    <div class="testimonials__info">
+                                        <strong class="testimonials__autor">Hanna Wilson</strong>
+                                        <a href="https://wordfaang.com" class="testimonials__site">wordfaang.com</a>
+                                    </div>
                                     <blockquote>
-                                        <p>Suspendisse ultrices at diam lectus nullam.
-                                            Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu
-                                            pulvinar
-                                            aenean
-                                            nam laoreet nulla.</p>
+                                        <p>Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat
+                                            tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
                                     </blockquote>
                                 </figcaption>
-
-
                             </figure>
                         </li>
                     </ul>
@@ -242,13 +236,13 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <div class="footer__top">
+            <div class="footer__heading">
                 <div class="footer__cta">
                     <h2 class="footer__title title">Try for free!</h2>
                     <p class="footer__subtitle">Get limited 1 week free try our features!</p>
                 </div>
                 <div class="footer__actions">
-                    <a href="#" class="btn btn_pink">Learn more</a>
+                    <a href="#" class="btn btn--pink">Learn more</a>
                     <a href="#" class="btn">
                         Request Demo
                         <svg width="20" height="14" class="btn__icon" aria-hidden="true">
@@ -259,19 +253,29 @@
             </div>
             <div class="footer__main">
                 <div class="footer__col footer__col--info">
-                    <a href="#" class="header__logo">
-                        <svg width="45" height="35" class="header__logo-icon" aria-label="DataWarehouse Logo">
-                            <use xlink:href="./assets/img/svg/sprite.svg#icon-logo"></use>
-                        </svg>
-                    </a>
-                    <strong class="footer__brand-name">DataWarehouse</strong>
-                    <address class="footer__address">
-                        <p>Warehouse Society, 234<br>
-                            Bahagia Ave Street<br>
-                            PRBW 29281</p>
-                        <ul class="footer__contacts-list">
-                            <li><a href="mailto:info@warehouse.project">info@warehouse.project</a></li>
-                            <li><a href="tel:+12323434">1-232-3434 (Main)</a></li>
+                    <div class="footer__logo_wrapper">
+                        <a href="#" class="header__logo">
+                            <svg width="45" height="35" class="header__logo-icon" aria-label="DataWarehouse Logo">
+                                <use xlink:href="./assets/img/svg/sprite.svg#icon-logo"></use>
+                            </svg>
+                        </a>
+                        <strong class="footer__brand-name">DataWarehouse</strong>
+                    </div>
+                    <address class="footer__address address-info">
+                        <p class="address-info__text">
+                            Warehouse Society, 234 Bahagia Ave Street PRBW 29281
+                        </p>
+                        <ul class="address-info__list">
+                            <li class="address-info__item">
+                                <a class="address-info__link" href="mailto:info@warehouse.project">
+                                    info@warehouse.project
+                                </a>
+                            </li>
+                            <li class="address-info__item">
+                                <a class="address-info__link" href="tel:+12323434">
+                                    1-232-3434 (Main)
+                                </a>
+                            </li>
                         </ul>
                     </address>
                 </div>
