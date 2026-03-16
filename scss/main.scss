@@ -39,47 +39,46 @@ body {
     &__body {
         @include m.flex(space-between, center);
     }
+}
 
-    &__logo {
-        display: inline-block; // Чтобы transform работал корректно
-        transition: transform 0.3s ease;
+.logo {
+    display: inline-block;
+    transition: transform 0.3s ease;
 
-        &-icon {
-            width: 45px;
-            height: 35px;
-            --color1: #9c69e2;
-            --color2: #f063b8;
+    &__icon {
+        width: 45px;
+        height: 35px;
+        --color1: #9c69e2;
+        --color2: #f063b8;
 
-            .path-small,
-            .path-big {
-                transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), fill 0.5s ease;
-                transform-box: fill-box; // Важно для корректного отсчета координат
-                transform-origin: center;
-            }
-        }
-
-        &:hover,
-        &:focus {
-            transform: scale(1.1);
-            cursor: url('../assets/img/cursor.png'), pointer;
-
-            .header__logo-icon {
-                // 1. Меняем цвета (перекрестно)
-                --color1: #f063b8;
-                --color2: #9c69e2;
-
-                // 2. Двигаем фигуры на места друг друга
-                .path-small {
-                    transform: translateX(24px); // Плывет вправо
-                }
-
-                .path-big {
-                    transform: translateX(-24px); // Плывет влево
-                }
-            }
+        .path-small,
+        .path-big {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), fill 0.5s ease;
+            transform-box: fill-box;
+            transform-origin: center;
         }
     }
 
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+        cursor: url('../assets/img/cursor.png'), pointer;
+
+        .header__logo-icon {
+            // 1. Меняем цвета (перекрестно)
+            --color1: #f063b8;
+            --color2: #9c69e2;
+
+            // 2. Двигаем фигуры на места друг друга
+            .path-small {
+                transform: translateX(24px); // Плывет вправо
+            }
+
+            .path-big {
+                transform: translateX(-24px); // Плывет влево
+            }
+        }
+    }
 }
 
 .nav {
@@ -92,25 +91,10 @@ body {
 
 }
 
-// .menu {
-//     @include m.flex(space-between, center);
-//     gap: 40px;
-
-//     &__link {
-//         // font-family: v.;
-//         @include m.font_title(1rem, 1.6, 500);
-//         color: v.$text-gray-dark;
-
-//         &:hover {
-//             color: v.$colors-violet-middle;
-//             cursor: url('../assets/img/cursor.png'), pointer;
-//         }
-//     }
-
-// }
 .menu {
-    @include m.flex(flex-end, center);
-    gap: 2.9vw;
+    @include m.flex(flex-start, center);
+    gap: 2.6vw;
+    padding-left: 120px;
     // padding: 0 30px;
 
     @media screen and (max-width:768px) {
@@ -154,8 +138,13 @@ body {
             transition: all 0.4s;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
+            color: v.$colors-violet-middle;
+            cursor: url('../assets/img/cursor.png'), pointer;
+
             &::after {
+                background-color: v.$colors-violet-middle;
                 opacity: 1;
                 width: 75%;
                 left: 50%;
@@ -277,7 +266,7 @@ body {
 
 .hero {
     padding: 100px 0;
-
+    
     &__content {
         display: flex;
         position: relative;
@@ -291,18 +280,12 @@ body {
 
     &__title {
         @include m.font_title(5rem, 1.1, 700);
-        // font-size: 80px;
-        // line-height: 1.1;
-        // font-weight: 700;
         width: 600px;
     }
 
     &__text {
         max-width: 370px;
 
-        // font-weight: 500;
-        // font-size: 18px;
-        // line-height: 160%;
         @media screen and (max-width:992px) {
             color: v.$text-violet-dark;
             font-weight: 700;
@@ -313,8 +296,10 @@ body {
         background-color: v.$colors-violet;
         color: v.$text-white;
         justify-content: center;
+        margin-bottom: 35px;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: v.$colors-violet-middle;
         }
     }
@@ -325,25 +310,6 @@ body {
         right: 0;
         z-index: -1;
     }
-
-    // h2 font-size: 40px;
-    // line-height: 130%;
-    // font-weight: 700;
-
-
-    // h3 card
-
-    // font-weight: 400;
-    // font-size: 24px;
-    // line-height: 130%;
-
-    // _autor
-    // font-family: Montserrat;
-    // font-weight: 500;
-    // font-size: 16px;
-    // line-height: 160%;
-    // vertical-align: middle;
-
 }
 
 .bank {
@@ -353,10 +319,8 @@ body {
     padding: 75px 0;
 
     &__body {
-        display: flex;
+        @include m.flex(space-between, center);
         flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
         padding: 0 70px;
         gap: 130px;
     }
@@ -364,9 +328,6 @@ body {
     &__title {
         @include m.font_title(2.5rem, 1.3, 700);
         margin-bottom: 40px;
-        // font-weight: 700;
-        // font-size: 40px;
-        // line-height: 130%;
     }
 }
 
@@ -377,9 +338,6 @@ body {
         text-align: center;
         @include m.font_title(2.5rem, 1.3, 700);
         margin-bottom: 50px;
-        //      font-size: 40px;
-        // line-height: 130%;
-        // font-weight: 700;
     }
 
     &__header {
@@ -391,7 +349,6 @@ body {
         text-align: center;
         display: block;
         margin: 0 auto;
-        // margin-bottom: 80px;
     }
 
     &__flex {
@@ -410,12 +367,11 @@ body {
 .card {
     max-width: 550px;
     display: flex;
-        justify-content: center;
+    justify-content: center;
 
     @media screen and (max-width:992px) {
         max-width: 416px;
         flex-wrap: wrap;
-        // justify-content: center;
 
     }
 
@@ -425,7 +381,7 @@ body {
     }
 
     &__content {
-        // position: relative;
+        position: relative;
         // left: -70px;
         height: 400px;
         margin-left: -70px;
@@ -463,9 +419,6 @@ body {
     &__title {
         margin-bottom: 20px;
         @include m.font_title(1.5rem, 1.3, 400);
-        // font-weight: 400;
-        // font-size: 24px;
-        // line-height: 130%;
     }
 
     &__text {
@@ -482,9 +435,12 @@ body {
         display: flex;
         align-items: center;
         gap: 20px;
-        margin-top: 50px;
+        margin-bottom: 50px;
+        position: absolute;
+        bottom: 0;
 
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: url('../assets/img/cursor.png'), pointer;
             @extend %btn-elevation;
             box-shadow: none;
@@ -506,16 +462,10 @@ body {
         color: v.$text-gray-dark;
         margin-bottom: 80px;
         @include m.font_title(2.5rem, 1.3, 700);
-        //        
-        // font-weight: 700;
-        // font-size: 40px;
-        // line-height: 130%;
     }
 
     &__cards {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include m.flex(space-between, center);
         gap: 100px;
 
     }
@@ -526,7 +476,6 @@ body {
         border-radius: 50px;
         border: 1px solid v.$colors-violet;
         box-shadow: 0px 5px 5px 0px #4B5D681A;
-        // height: 300px;
         max-width: 465px;
 
         &_img {
@@ -535,9 +484,7 @@ body {
     }
 
     &__figure {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        @include m.flex(space-between, flex-start);
         gap: 15px;
     }
 
@@ -558,12 +505,7 @@ body {
     &__site {
         color: v.$colors-violet;
         @include m.font_title(0.875rem, 1.6, 500, 1%);
-        // font-weight: 500;
-        // font-size: 14px;
-        // line-height: 160%;
-        // letter-spacing: 1%;
         vertical-align: middle;
-
     }
 }
 
@@ -573,57 +515,36 @@ body {
     &__heading {
         @include m.flex(space-between, center);
         margin-bottom: 100px;
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
     }
 
     &__title {
         @include m.font_title(2.5rem, 1.3, 700);
         margin-bottom: 20px;
-        // font-weight: 700;
-        // font-size: 40px;
-        // line-height: 130%;
     }
 
     &__subtitle {
-        // font-family: v.$font-family;
         @include m.font_title(1.125rem, 1.6, 500);
         color: v.$text-gray-dark ;
-        // font-family: Montserrat;
-        // font-weight: 500;
-        // font-size: 18px;
-        // line-height: 160%;
-
-
     }
 
     &__actions {
-        display: flex;
+        @include m.flex(space-between, center);
         gap: 30px;
-        justify-content: space-between;
-        align-items: center;
     }
 
     &__main {
         @include m.flex(space-between, baseline);
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: baseline;
         margin-bottom: 100px;
     }
 
     &__logo_wrapper {
-        @include m.flex(space-between, center);
+        @include m.flex(flex-start, center);
         gap: 20px;
         margin-bottom: 60px;
     }
 
     &__brand-name {
         @include m.font_title(1.25rem, 1.6, 600);
-        // font-weight: 600;
-        // font-size: 20px;
-        // line-height: 160%;
     }
 
     &__address {
@@ -637,19 +558,13 @@ body {
         vertical-align: middle;
         color: v.$text-violet-dark;
         margin-bottom: 30px;
-        // about h4?
-        // font-family: Montserrat;
-        // font-weight: 600;
-        // font-size: 16px;
-        // line-height: 160%;
-        // vertical-align: middle;
-
     }
 
     &__nav__link {
         color: v.$text-gray-dark;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: v.$colors-violet-middle;
             cursor: url('../assets/img/cursor.png'), pointer;
         }
@@ -663,7 +578,8 @@ body {
         background-color: v.$colors-gray-light;
         position: relative;
 
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: url('../assets/img/cursor.png'), pointer;
         }
     }
@@ -678,7 +594,8 @@ body {
     &__list {
         &__item {
 
-            &:nth-child(3n+1):hover {
+            &:nth-child(3n+1):hover,
+            &:nth-child(3n+1):focus {
                 .footer__link {
                     background: transparent;
                     border: 1px solid v.$colors-blue-facebook;
@@ -690,7 +607,8 @@ body {
                 }
             }
 
-            &:nth-child(3n+2):hover {
+            &:nth-child(3n+2):hover,
+            &:nth-child(3n+2):focus {
                 .footer__link {
                     background: transparent;
                     border: 1px solid v.$colors-blue-twitter;
@@ -702,7 +620,8 @@ body {
                 }
             }
 
-            &:nth-child(3n+3):hover {
+            &:nth-child(3n+3):hover,
+            &:nth-child(3n+3):focus {
                 .footer__link {
                     background: transparent;
                     border: 1px solid v.$colors-pink-instagram;
@@ -749,11 +668,6 @@ body {
 
             @include m.font_title(1rem, 1.8, 500, 1%);
             margin-bottom: 10px;
-            // font-weight: 500;
-            // font-size: 16px;
-            // line-height: 180%;
-            // letter-spacing: 1%;
-
         }
 
         &__link {
@@ -761,12 +675,6 @@ body {
             cursor: url('../assets/img/cursor.png'), pointer;
             @include m.font_title(1rem, 1.8, 400, 1%);
             margin-bottom: 10px;
-            // font-family: Montserrat;
-            // font-weight: 400;
-            // font-size: 16px; 
-            // line-height: 180%;
-            // letter-spacing: 1%;
-
         }
     }
 }
