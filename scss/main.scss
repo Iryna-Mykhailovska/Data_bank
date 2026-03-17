@@ -444,7 +444,9 @@ body {
         flex-wrap: wrap;
         justify-content: flex-end;
 
-        column-gap: 13.5vw;
+        -moz-column-gap: 13.5vw;
+
+             column-gap: 13.5vw;
         row-gap: 10.5vh;
 
         @media screen and (max-width:992px) {

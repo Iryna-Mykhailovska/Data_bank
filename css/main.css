@@ -461,6 +461,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  -moz-column-gap: 13.5vw;
   column-gap: 13.5vw;
   row-gap: 10.5vh;
 }
