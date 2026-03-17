@@ -146,8 +146,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .menu {
-    position: fixed;
-    right: -100%;
+    position: absolute;
+    right: 0;
     top: 100px;
     opacity: 0;
     flex-direction: column;
