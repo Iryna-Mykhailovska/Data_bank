@@ -709,7 +709,14 @@ body {
     padding: 120px 0;
 
     @media screen and (max-width:992px) {
-        padding: 80px 0;
+        padding: 0;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (max-width:576px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     &__heading {
@@ -775,13 +782,7 @@ body {
 
     }
 
-    @media screen and (max-width:992px) {
-        margin-bottom: 40px;
-    }
 
-    @media screen and (max-width:576px) {
-        margin-bottom: 20px;
-    }
 
 
     &__brand-name {
@@ -914,10 +915,12 @@ body {
 
         &__link {
             color: v.$text-violet-dark;
-            
+
             @include m.font_title(1rem, 1.8, 400, 1%);
             margin-bottom: 10px;
-            &:hover,&:focus{
+
+            &:hover,
+            &:focus {
                 cursor: url('../assets/img/cursor.png'), pointer;
                 color: v.$colors-violet-middle;
             }
