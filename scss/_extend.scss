@@ -10,7 +10,7 @@
   font-family: v.$font-family;
   @include m.font_title(1rem, 1.6, 500);
   color: v.$text-white;
-  max-width: 210px;
+  width: 210px;
   height: 60px;
   box-shadow: 0px 5px 5px 0px #4B5D681A;
  

@@ -42,16 +42,13 @@ body {
     padding: 0 10px;
 
     @media screen and (max-width:992px) {
-
         max-width: v.$container_width_tablet;
     }
 
     @media screen and (max-width:576px) {
         max-width: v.$container_width_mobile;
     }
-
 }
-
 
 .header {
     padding: 20px 0;
@@ -68,12 +65,14 @@ body {
     &__icon {
         width: 45px;
         height: 35px;
+        --trans-small: translateX(0);
+        --trans-big: translateX(0);
         --color1: #9c69e2;
         --color2: #f063b8;
 
         .path-small,
         .path-big {
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), fill 0.5s ease;
+            // Эти свойства теперь лучше продублировать здесь для надежности
             transform-box: fill-box;
             transform-origin: center;
         }
@@ -84,19 +83,13 @@ body {
         transform: scale(1.1);
         cursor: url('../assets/img/cursor.png'), pointer;
 
-        .header__logo-icon {
-            // 1. Меняем цвета (перекрестно)
+        // Обращаемся напрямую к иконке внутри логотипа
+        .logo__icon {
             --color1: #f063b8;
             --color2: #9c69e2;
 
-            // 2. Двигаем фигуры на места друг друга
-            .path-small {
-                transform: translateX(24px); // Плывет вправо
-            }
-
-            .path-big {
-                transform: translateX(-24px); // Плывет влево
-            }
+            --trans-small: translateX(24px);
+            --trans-big: translateX(-24px);
         }
     }
 }
@@ -777,7 +770,7 @@ body {
         max-width: calc(50% - 40px);
 
         @media screen and (max-width:992px) {
-            padding: 20px 10px;
+            padding: 20px 20px;
             max-width: calc(50% - 20px);
         }
 
@@ -794,6 +787,17 @@ body {
     &__figure {
         @include m.flex(space-between, flex-start);
         gap: 15px;
+
+        @media screen and (max-width:992px) {
+            flex-direction: column;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width:992px) {}
     }
 
     &__info {
