@@ -72,7 +72,6 @@ body {
 
         .path-small,
         .path-big {
-            // Эти свойства теперь лучше продублировать здесь для надежности
             transform-box: fill-box;
             transform-origin: center;
         }
@@ -83,7 +82,6 @@ body {
         transform: scale(1.1);
         cursor: url('../assets/img/cursor.png'), pointer;
 
-        // Обращаемся напрямую к иконке внутри логотипа
         .logo__icon {
             --color1: #f063b8;
             --color2: #9c69e2;
@@ -108,7 +106,6 @@ body {
     @include m.flex(flex-start, center);
     gap: 2.6vw;
     padding-left: 120px;
-    // padding: 0 30px;
 
     @media screen and (max-width:768px) {
         position: absolute;
@@ -128,7 +125,7 @@ body {
     &__item {
         @media screen and (max-width: 768px) {
             padding: 10px 0;
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid v.$text-white;
             width: 100%;
             text-align: center;
         }
@@ -151,7 +148,7 @@ body {
             transform: translateX(-50%);
             width: 0;
             height: 1px;
-            background-color: #000;
+            background-color: v.$colors-violet-middle;
             opacity: 0;
             transition: all 0.4s;
         }
@@ -169,8 +166,6 @@ body {
             }
         }
     }
-
-
 }
 
 .burger {
@@ -245,7 +240,6 @@ body {
         padding: 8px 12px;
     }
 
-
     &__icon {
         stroke: v.$colors-violet;
         fill: none;
@@ -253,12 +247,9 @@ body {
 
     &:hover,
     &:focus {
-
         @extend %btn-elevation;
-
         color: v.$text-white;
         background-color: v.$colors-violet;
-
     }
 
     &:hover .btn__icon,
@@ -276,7 +267,6 @@ body {
         &:focus {
             background: v.$colors-pink-middle;
         }
-
     }
 }
 
@@ -443,10 +433,8 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-
         -moz-column-gap: 13.5vw;
-
-             column-gap: 13.5vw;
+        column-gap: 13.5vw;
         row-gap: 10.5vh;
 
         @media screen and (max-width:992px) {
@@ -458,7 +446,6 @@ body {
             justify-content: flex-end;
             flex-direction: column;
             align-content: center;
-            // max-width: calc(60% - 10px);
         }
     }
 }
@@ -473,7 +460,6 @@ body {
         max-width: calc(50% - 15px);
     }
 
-    // max-width: calc(50% - 15px);
     @media screen and (max-width:576px) {
         max-width: calc(50% - 10px);
     }
@@ -482,7 +468,7 @@ body {
         position: absolute;
         left: -170px;
         z-index: 2;
-        flex-shrink: 0; // Щоб фото не стискалося
+        flex-shrink: 0;
 
         @media screen and (max-width:992px) {
             display: none;
@@ -499,17 +485,10 @@ body {
         flex-grow: 1;
         position: relative;
         z-index: 1;
-
         height: 400px;
         background-repeat: no-repeat;
         background-size: auto;
-
-        /* Замість margin-left: -70px */
-        // left: -70px; // Зміщуємо весь блок вліво
-        padding: 62px 70px 62px 100px; // Компенсуємо зміщення всередині, щоб текст був на місці
-
-        /* Важливо: */
-        // width: calc(100% - 170px);
+        padding: 62px 70px 62px 100px;
         border-radius: 50px;
 
         @media screen and (max-width:992px) {
@@ -561,7 +540,6 @@ body {
         @media screen and (max-width:576px) {
             margin-bottom: 15px;
         }
-
     }
 
     &__btn {
@@ -579,12 +557,10 @@ body {
 
         @media screen and (max-width:992px) {
             margin-bottom: 30px;
-
         }
 
         @media screen and (max-width:576px) {
             margin-bottom: 10px;
-
         }
 
         &:hover,
@@ -592,7 +568,6 @@ body {
             cursor: url('../assets/img/cursor.png'), pointer;
             @extend %btn-elevation;
             box-shadow: none;
-            // font-size: 1.5rem;
         }
     }
 }
@@ -607,7 +582,6 @@ body {
 
     @media screen and (max-width:992px) {
         padding: 50px 40px;
-
     }
 
     &__title {
@@ -618,14 +592,12 @@ body {
 
         @media screen and (max-width:992px) {
             margin-bottom: 50px;
-
         }
     }
 
     &__cards {
         @include m.flex(space-between, center);
         gap: 6.5vw;
-
 
         @media screen and (max-width:992px) {
             gap: 3vw;
@@ -635,7 +607,6 @@ body {
         @media screen and (max-width:576px) {
             flex-direction: column;
         }
-
     }
 
     &__card {
@@ -644,7 +615,6 @@ body {
         border-radius: 50px;
         border: 1px solid v.$colors-violet;
         box-shadow: 0px 5px 5px 0px #4B5D681A;
-        // max-width: 465px;
         max-width: calc(50% - 40px);
 
         @media screen and (max-width:992px) {
@@ -654,7 +624,6 @@ body {
 
         @media screen and (max-width:576px) {
             max-width: calc(100% - 10px);
-
         }
 
         &_img {
@@ -687,7 +656,6 @@ body {
 
     &__autor {
         font-weight: 500;
-        // font-size: 16px;
         line-height: 1.6;
         vertical-align: middle;
     }
@@ -784,9 +752,6 @@ body {
 
     }
 
-
-
-
     &__brand-name {
         @include m.font_title(1.25rem, 1.6, 600);
     }
@@ -797,7 +762,6 @@ body {
     }
 
     &__col-title {
-
         @include m.font_title(1rem, 1.6, 600);
         vertical-align: middle;
         color: v.$text-violet-dark;
@@ -830,7 +794,6 @@ body {
 
     &__icon {
         position: absolute;
-        // left:50%;
         @include m.pos_center(50%, 50%);
         fill: v.$text-white;
     }
@@ -847,7 +810,6 @@ body {
 
                 .footer__icon {
                     fill: v.$colors-blue-facebook;
-
                 }
             }
 
@@ -860,7 +822,6 @@ body {
 
                 .footer__icon {
                     fill: v.$colors-blue-twitter;
-
                 }
             }
 
@@ -873,10 +834,8 @@ body {
 
                 .footer__icon {
                     fill: v.$colors-pink-instagram;
-
                 }
             }
-
         }
 
         &_icons {
@@ -887,7 +846,6 @@ body {
                 gap: 5px;
             }
         }
-
     }
 
     &__copyright {
@@ -895,29 +853,21 @@ body {
         display: inline-block;
         color: v.$text-violet-dark;
         @include m.font_title(0.75rem, 1.8, 300, 1%);
-        // font-size:12px;
-        // font-weight: 300;
-        // line-height: 1.8;
-        // letter-spacing: 1%;
         vertical-align: middle;
-
     }
 }
 
 .address {
-
     &-info {
         color: v.$text-violet-dark;
 
         &__text {
-
             @include m.font_title(1rem, 1.8, 500, 1%);
             margin-bottom: 10px;
         }
 
         &__link {
             color: v.$text-violet-dark;
-
             @include m.font_title(1rem, 1.8, 400, 1%);
             margin-bottom: 10px;
 
