@@ -785,6 +785,13 @@ body {
     margin-bottom: 70px;
   }
 }
+@media screen and (max-width: 576px) {
+  .footer__main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
 .footer__logo_wrapper {
   display: flex;
   justify-content: flex-start;
@@ -818,6 +825,16 @@ body {
   vertical-align: middle;
   color: #212353;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 992px) {
+  .footer__col-title {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer__col-title {
+    margin-bottom: 10px;
+  }
 }
 .footer__nav__link {
   color: #4b5d68;

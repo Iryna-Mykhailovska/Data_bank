@@ -638,6 +638,7 @@ body {
         @media screen and (max-width:992px) {
             flex-direction: column;
         }
+
         @media screen and (max-width:576px) {
             flex-direction: row;
         }
@@ -738,6 +739,13 @@ body {
         @media screen and (max-width:992px) {
             margin-bottom: 70px;
         }
+
+        @media screen and (max-width:576px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            // text-align: center;
+        }
     }
 
     &__logo_wrapper {
@@ -769,6 +777,14 @@ body {
         vertical-align: middle;
         color: v.$text-violet-dark;
         margin-bottom: 30px;
+
+        @media screen and (max-width:992px) {
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width:576px) {
+            margin-bottom: 10px;
+        }
     }
 
     &__nav__link {
