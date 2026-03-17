@@ -61,7 +61,12 @@
                     </div>
                     <div class="hero__image-wrapper">
                         <picture>
-                            <img src="./assets/img/desktop/hero_desktop.webp" alt="Data storage illustration"
+                            <source media="(max-width: 576px)" srcset="./assets/img/mobile/hero_mobile.webp 1x, 
+                                ./assets/img/mobile/hero_mobile@2x.webp 2x">
+                            <source media="(max-width: 992px)" srcset="./assets/img/tablet/hero_tablet.webp 1x, 
+                                ./assets/img/tablet/hero_tablet@2x.webp 2x">
+                            <img src="./assets/img/desktop/hero_desktop.webp"
+                                srcset="./assets/img/desktop/hero_desktop@2x.webp 2x" alt="Data storage illustration"
                                 class="hero__image">
                         </picture>
                     </div>
@@ -84,7 +89,13 @@
                     </div>
                     <div class="bank__image-wrapper">
                         <picture>
-                            <img src="./assets/img/desktop/bank_desktop.webp" alt="Security bank" class="bank__image">
+                            <source media="(max-width: 576px)" srcset="./assets/img/mobile/bank_mobile.webp 1x, 
+                                ./assets/img/mobile/bank_mobile@2x.webp 2x">
+                            <source media="(max-width: 922px)" srcset="./assets/img/tablet/bank_tablet.webp 1x, 
+                                ./assets/img/tablet/bank_tablet@2x.webp 2x">
+                            <img src="./assets/img/desktop/bank_desktop.webp"
+                                srcset="./assets/img/desktop/bank_desktop@2x.webp 2x" alt="Security bank"
+                                class="bank__image">
                         </picture>
                     </div>
                 </div>
@@ -92,9 +103,7 @@
             </section>
 
             <section class="features" id="features">
-
                 <div class="features__header">
-
                     <h2 class="features__title title">Features</h2>
                     <p class="features__text text">
                         Some of the features and advantages that we provide for those of you who store data in this
@@ -102,12 +111,16 @@
                         Warehouse.
                     </p>
                 </div>
-
                 <ul class="features__flex">
                     <li class="features__item card">
                         <div class="card__image-wrapper">
-                            <img src="./assets/img/desktop/img_card_1_desktop.webp" alt="Search Data"
-                                class="card__image">
+                            <picture>
+                                <source media="(max-width: 576px)" srcset="./assets/img/mobile/img_card_1_mobile.webp 1x, 
+                                ./assets/img/mobile/img_card_1_mobile@2x.webp 2x">
+                                <img src="./assets/img/desktop/img_card_1_desktop.webp"
+                                    srcset="./assets/img/desktop/img_card_1_desktop@2x.webp 2x" alt="Search Data"
+                                    class="card__image">
+                            </picture>
                         </div>
                         <div class="card__content">
                             <h3 class="card__title title">Search Data</h3>
@@ -123,11 +136,15 @@
                             </a>
                         </div>
                     </li>
-
                     <li class="features__item card">
                         <div class="card__image-wrapper">
-                            <img src="./assets/img/desktop/img_card_2_desktop.webp" alt="24 Hours Access"
-                                class="card__image">
+                            <picture>
+                                <source media="(max-width:576px)" srcset="./assets/img/mobile/img_card_2_mobile.webp 1x, 
+                                ./assets/img/mobile/img_card_2_mobile@2x.webp 2x">
+                                <img src="./assets/img/desktop/img_card_2_desktop.webp"
+                                    srcset="./assets/img/desktop/img_card_2_desktop@2x.webp 2x" alt="24 Hours Access"
+                                    class="card__image">
+                            </picture>
                         </div>
                         <div class="card__content">
                             <h3 class="card__title title">24 Hours Access</h3>
@@ -143,10 +160,15 @@
                             </a>
                         </div>
                     </li>
-
                     <li class="features__item card">
                         <div class="card__image-wrapper">
-                            <img src="./assets/img/desktop/img_card_3_desktop.webp" alt="Print Out" class="card__image">
+                            <picture>
+                                <source media="(max-width: 576px)" srcset="./assets/img/mobile/img_card_3_mobile.webp 1x, 
+                                ./assets/img/mobile/img_card_3_mobile@2x.webp 2x">
+                                <img src="./assets/img/desktop/img_card_3_desktop.webp"
+                                    srcset="./assets/img/desktop/img_card_3_desktop@2x.webp 2x" alt="Print Out"
+                                    class="card__image">
+                            </picture>
                         </div>
                         <div class="card__content">
                             <h3 class="card__title title">Print Out</h3>
@@ -162,11 +184,15 @@
                             </a>
                         </div>
                     </li>
-
                     <li class="features__item card">
                         <div class="card__image-wrapper">
-                            <img src="./assets/img/desktop/img_card_4_desktop.webp" alt="Security Code"
-                                class="card__image">
+                            <picture>
+                                <source media="(max-width: 576px)" srcset="./assets/img/mobile/img_card_4_mobile.webp 1x, 
+                                ./assets/img/mobile/img_card_4_mobile@2x.webp 2x">
+                                <img src="./assets/img/desktop/img_card_4_desktop.webp"
+                                    srcset="./assets/img/desktop/img_card_4_desktop@2x.webp 2x" alt="Security Code"
+                                    class="card__image">
+                            </picture>
                         </div>
                         <div class="card__content">
                             <h3 class="card__title title">Security Code</h3>
@@ -183,50 +209,48 @@
                         </div>
                     </li>
                 </ul>
-
             </section>
-
             <section class="testimonials">
                 <!-- <div class="container"> -->
-                    <h2 class="testimonials__title title">Testimonials</h2>
-                    <ul class="testimonials__cards">
-                        <li class="testimonials__card">
-                            <figure class="testimonials__figure">
-                                <picture>
-                                    <img class="testimonials__card_img" src="./assets/img/desktop/avatar_1_desktop.webp"
-                                        alt="John Fang">
-                                </picture>
-                                <figcaption>
-                                    <div class="testimonials__info">
-                                        <strong class="testimonials__autor">John Fang</strong>
-                                        <a href="https://wordfaang.com" class="testimonials__site">wordfaang.com</a>
-                                    </div>
-                                    <blockquote>
-                                        <p>Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat
-                                            tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
-                                    </blockquote>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="testimonials__card">
-                            <figure class="testimonials__figure">
-                                <picture>
-                                    <img class="testimonials__card_img" src="./assets/img/desktop/avatar_2_desktop.webp"
-                                        alt="Hanna Wilson">
-                                </picture>
-                                <figcaption>
-                                    <div class="testimonials__info">
-                                        <strong class="testimonials__autor">Hanna Wilson</strong>
-                                        <a href="https://wordfaang.com" class="testimonials__site">wordfaang.com</a>
-                                    </div>
-                                    <blockquote>
-                                        <p>Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat
-                                            tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
-                                    </blockquote>
-                                </figcaption>
-                            </figure>
-                        </li>
-                    </ul>
+                <h2 class="testimonials__title title">Testimonials</h2>
+                <ul class="testimonials__cards">
+                    <li class="testimonials__card">
+                        <figure class="testimonials__figure">
+                            <picture>
+                                <img class="testimonials__card_img" src="./assets/img/desktop/avatar_1_desktop.webp"
+                                    alt="John Fang">
+                            </picture>
+                            <figcaption>
+                                <div class="testimonials__info">
+                                    <strong class="testimonials__autor">John Fang</strong>
+                                    <a href="https://wordfaang.com" class="testimonials__site">wordfaang.com</a>
+                                </div>
+                                <blockquote>
+                                    <p>Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat
+                                        tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
+                                </blockquote>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="testimonials__card">
+                        <figure class="testimonials__figure">
+                            <picture>
+                                <img class="testimonials__card_img" src="./assets/img/desktop/avatar_2_desktop.webp"
+                                    alt="Hanna Wilson">
+                            </picture>
+                            <figcaption>
+                                <div class="testimonials__info">
+                                    <strong class="testimonials__autor">Hanna Wilson</strong>
+                                    <a href="https://wordfaang.com" class="testimonials__site">wordfaang.com</a>
+                                </div>
+                                <blockquote>
+                                    <p>Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat
+                                        tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
+                                </blockquote>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
                 <!-- </div> -->
             </section>
         </div>

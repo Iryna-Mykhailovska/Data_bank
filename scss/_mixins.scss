@@ -13,26 +13,14 @@
     letter-spacing: $letter_spacing;
 }
 
+@mixin pos_center($percentX, $percentY) {
+    left: $percentX;
+    top: $percentY;
+    transform: translateX(-1*$percentX) translateY(-1*$percentY);
+}
+
 @mixin pos_abs($top, $left: null) {
     position: absolute;
     top: $top;
     left: $left;
 }
-
-@mixin pos_center($percentX,$percentY) {
-    // position: relative;
-    left: $percentX;
-    top:$percentY;
-    transform: translateX(-1*$percentX) translateY(-1*$percentY);
-
-}
-
-
-
-@function rem($px) {
-    @return $px / v.$main_font_size * 1rem;
-}
-
-// @function line-height($px) {
-//     @return ($px / 1.8) / 10;
-// }
